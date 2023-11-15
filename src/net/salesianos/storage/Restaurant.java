@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Restaurant {
     private int capacity;
-    private ArrayList storage = new ArrayList<>(this.capacity);
+    private final ArrayList<String> storage = new ArrayList<>(this.capacity);
 
     public Restaurant(int capacity) {
         this.capacity = capacity;
@@ -34,7 +34,7 @@ public class Restaurant {
         notifyAll();
     }
 
-    public ArrayList getStorage() {
+    public ArrayList<String> getStorage() {
         return storage;
     }
 }
