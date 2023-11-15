@@ -19,7 +19,7 @@ public class Farmer extends Thread{
     public void run() {
         for (int i = 0; i < this.vegetableQuantity; i++) {
             try {
-                Thread.sleep(Utils.randomInterval());
+                Thread.sleep(Utils.randomInterval(3));
                 restaurant.addVegetable(this.name);
                 System.out.println("Vegetables in storage: " + restaurant.getStorage());
             } catch (InterruptedException e) {

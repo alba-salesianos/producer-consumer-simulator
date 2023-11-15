@@ -20,7 +20,7 @@ public class Customer extends Thread{
     public void run() {
         for (int i = 0; i < this.vegetableQuantity; i++) {
             try {
-                Thread.sleep(Utils.randomInterval());
+                Thread.sleep(Utils.randomInterval(10));
                 restaurant.consumeVegetable(this.name);
                 System.out.println("Vegetables in storage: " + restaurant.getStorage());
 
