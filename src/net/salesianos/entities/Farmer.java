@@ -15,7 +15,6 @@ public class Farmer extends Thread{
 
     }
 
-
     @Override
     public void run() {
         for (int i = 0; i < this.vegetableQuantity; i++) {
