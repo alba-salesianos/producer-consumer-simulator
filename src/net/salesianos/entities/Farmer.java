@@ -1,12 +1,18 @@
 package net.salesianos.entities;
 
+import net.salesianos.storage.Restaurant;
 import net.salesianos.utils.Utils;
 public class Farmer extends Thread{
 
     private int vegetableQuantity;
+    private Restaurant restaurant;
+    private String name;
 
-    public Farmer(int vegetableQuantity) {
+    public Farmer(int vegetableQuantity, String name, Restaurant restaurant) {
         this.vegetableQuantity = vegetableQuantity;
+        this.restaurant = restaurant;
+        this.name = name;
+
     }
 
 
@@ -16,7 +22,8 @@ public class Farmer extends Thread{
             try {
                 System.out.println("Cultivando...");
                 sleep(Utils.randomInterval());
-                System.out.println(Utils.generateVegetable());
+                restaurant.addVegetable(this.name);
+                System.out.println(restaurant.getStorage());
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
