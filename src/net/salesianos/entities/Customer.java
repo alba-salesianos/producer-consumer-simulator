@@ -3,7 +3,7 @@ package net.salesianos.entities;
 import net.salesianos.storage.Restaurant;
 import net.salesianos.utils.Utils;
 
-public class Customer extends Thread{
+public class Customer extends Thread {
     private final int vegetableQuantity;
     private final Restaurant restaurant;
     private final String name;
@@ -12,7 +12,6 @@ public class Customer extends Thread{
         this.vegetableQuantity = vegetableQuantity;
         this.name = name;
         this.restaurant = restaurant;
-
     }
 
 

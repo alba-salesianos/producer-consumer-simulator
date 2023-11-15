@@ -20,11 +20,9 @@ public class Restaurant {
         System.out.println("The farmer " + name + " has grown: " + vegetable);
         this.storage.add(vegetable);
         notifyAll();
-
     }
 
     public synchronized void consumeVegetable(String name) throws InterruptedException {
-
         while (storage.isEmpty()) {
             wait();
         }

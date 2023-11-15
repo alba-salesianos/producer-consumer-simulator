@@ -2,7 +2,8 @@ package net.salesianos.entities;
 
 import net.salesianos.storage.Restaurant;
 import net.salesianos.utils.Utils;
-public class Farmer extends Thread{
+
+public class Farmer extends Thread {
 
     private final int vegetableQuantity;
     private final Restaurant restaurant;
@@ -12,7 +13,6 @@ public class Farmer extends Thread{
         this.vegetableQuantity = vegetableQuantity;
         this.restaurant = restaurant;
         this.name = name;
-
     }
 
     @Override
@@ -25,8 +25,6 @@ public class Farmer extends Thread{
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-
-
         }
     }
 }
